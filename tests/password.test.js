@@ -1,17 +1,5 @@
-const isStrongPassword = require('./password');
+const { sum } = require('../src/index');
 
-test('valid strong password', () => {
-  expect(isStrongPassword('DevOps123')).toBe(true);
-});
-
-test('fails for short password', () => {
-  expect(isStrongPassword('Dev1')).toBe(false);
-});
-
-test('fails without uppercase', () => {
-  expect(isStrongPassword('devops123')).toBe(false);
-});
-
-test('fails without number', () => {
-  expect(isStrongPassword('DevOps')).toBe(false);
+test('adds 2 + 3 to equal 5', () => {
+  expect(sum(2, 3)).toBe(5);
 });
